@@ -3,13 +3,11 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.save 
        redirect_to prototype_path(@comment.prototype) # prototype_pathにprototypeのidが必要です。
-    else
-       @prototype=@comment.prototype
-       @comments=@prototype.comments
-       render 'prototypes/show', status: :unprocessable_entity
-      
-    end
-     
+    else       
+      @prototype=@comment.prototype
+      @comments=@prototype.comments
+      render "prototypes/show"
+    end     
   end
 
 
