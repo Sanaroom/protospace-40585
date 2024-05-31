@@ -21,5 +21,5 @@
 | --------- | --------- | ----------- |
 | content   | text      | null: false |
 | prototype | reference | null: false, foreign_key: true |
-| user      | reference | null: false, foreign_key: true |
+| user      | reference | null: false, foreign_key: true |　
 
